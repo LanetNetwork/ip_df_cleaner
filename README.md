@@ -47,6 +47,10 @@ systemctl enable ip_df_cleaner@0
 systemctl start ip_df_cleaner@0
 ```
 
+Of course, one should add appropriate rule to iptables:
+
+`iptables -t filter -A OUTPUT -d 1.2.3.4 -j NFQUEUE --queue-num 0`
+
 Distribution and Contribution
 -----------------------------
 
