@@ -1,0 +1,13 @@
+[Unit]
+Description=NFQUEUE userspace helper to clean IP DF bit
+After=network.target
+
+[Service]
+Type=simple
+PrivateTmp=true
+ExecStart=/usr/bin/ip_df_cleaner --queue=%I
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
