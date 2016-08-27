@@ -26,7 +26,7 @@ make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
-%{__install} -D -m0644 configs/%{name}@.service %{buildroot}%{_unitdir}/%{name}.service
+%{__install} -D -m0644 configs/%{name}@.service %{buildroot}%{_unitdir}/%{name}@.service
 cd build
 make install
 
